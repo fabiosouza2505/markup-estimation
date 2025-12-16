@@ -1,0 +1,1 @@
+# Arquivos de texto\n*.m text eol=lf\n*.md text eol=lf\n*.txt text eol=lf\n*.csv text eol=lf\n\n# Arquivos binários\n*.mat binary\n*.fig binary\n*.png binary\n*.jpg binary\n*.pdf binary\n
