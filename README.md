@@ -7,26 +7,50 @@ Este projeto estima markups (poder de mercado) de empresas brasileiras usando:\n
 - **Dados:** Painel trimestral 1990-2025, empresas listadas B3\n
 - **Setores:** Indústria, serviços, utilities\n\n
 ## 📁 Estrutura do Repositório\n\n
-```\nmarkup-estimation-matlab/\n│\n├── code/                          
-# 💻 Código MATLAB\n│   ├── estimation/
-# Scripts de estimação\n│   │   ├── translog_markup_estimation.m
-# 2SLS (principal)\n│   │   ├── translog_markup_fminsearch.m
-# NLS alternativo\n│   │   └── functions/
-# Funções auxiliares\n│   ├── analysis/
-# Análise de resultados\n│   │   └── analyze_markup_results.m\n│   └── tests/
-# Testes e validação\n│       ├── exemplo_uso_rapido.m\n│       └── demo_2sls_vs_fminsearch.m\n│\n├── data/
-# 📊 Dados (não versionados)\n│   ├── raw/
-# Dados brutos da Economática\n│   └── processed/
-# Painel limpo (panel_data.csv)\n│\n├── results/
-# 📈 Outputs (não versionados)\n│   ├── tables/
-# Tabelas CSV e LaTeX\n│   ├── figures/
-# Gráficos PNG/PDF\n│   └── estimates/
-# Parâmetros estimados (.mat)\n│\n├── docs/
-# 📚 Documentação\n│   ├── README_MATLAB.md
-# Manual completo\n│   ├── COMPARACAO_2SLS_vs_FMINSEARCH.md\n│   └── VALIDACAO_PYTHON_MATLAB.md\n│\n├── paper/
-# 📄 Artigo (LaTeX)\n│\n├── .gitignore
-# Git ignore rules\n├── LICENSE
-# Licença MIT\n└── README.md
+```\nmarkup-estimation-matlab/\n│\n
+├── code/                          
+# 💻 Código MATLAB\n
+│   ├── estimation/
+# Scripts de estimação\n
+│   │   ├── translog_markup_estimation.m
+# 2SLS (principal)\n
+│   │   ├── translog_markup_fminsearch.m
+# NLS alternativo\n
+│   │   └── functions/
+# Funções auxiliares\n
+│   ├── analysis/
+# Análise de resultados\n
+│   │   └── analyze_markup_results.m\n
+│   └── tests/
+# Testes e validação\n
+│       ├── exemplo_uso_rapido.m\n
+│       └── demo_2sls_vs_fminsearch.m\n│\n├── data/
+# 📊 Dados (não versionados)\n
+│   ├── raw/
+# Dados brutos da Economática\n
+│   └── processed/
+# Painel limpo (panel_data.csv)\n
+│\n├── results/
+# 📈 Outputs (não versionados)\n
+│   ├── tables/
+# Tabelas CSV e LaTeX\n
+│   ├── figures/
+# Gráficos PNG/PDF\n
+│   └── estimates/
+# Parâmetros estimados (.mat)\n
+│\n├── docs/
+# 📚 Documentação\n
+│   ├── README_MATLAB.md
+# Manual completo\n
+│   ├── COMPARACAO_2SLS_vs_FMINSEARCH.md\n
+│   └── VALIDACAO_PYTHON_MATLAB.md\n
+│\n├── paper/
+# 📄 Artigo (LaTeX)\n│\n
+├── .gitignore
+# Git ignore rules\n
+├── LICENSE
+# Licença MIT\n
+└── README.md
 # Este arquivo\n```\n\n
 ## 🚀 Como Usar\n\n
 ### Pré-requisitos\n\n- MATLAB R2020b ou superior\n- Statistics and Machine Learning Toolbox\n- Dados processados em `data/processed/panel_data.csv`\n\n
