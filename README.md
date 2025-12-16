@@ -59,18 +59,21 @@ markup-estimation-matlab/
 ├── LICENSE
 # Licença MIT
 └── README.md
-# Este arquivo\n```\n\n
-## 🚀 Como Usar\n\n
-### Pré-requisitos\n\n
-- MATLAB R2020b ou superior\n
-- Statistics and Machine Learning Toolbox\n
-- Dados processados em `data/processed/panel_data.csv`\n\n
-### Setup Inicial\n\n
+# Este arquivo
+```\n\n
+## 🚀 Como Usar
+### Pré-requisitos
+- MATLAB R2020b ou superior
+- Statistics and Machine Learning Toolbox
+- Dados processados em `data/processed/panel_data.csv`
+### Setup Inicial
 ```matlab
 % Adicionar caminhos do projeto\naddpath(genpath('code'));\nsavepath;
 ```
 ### Estimação Principal (2SLS)
-```matlab\ncd code/estimation\ntranslog_markup_estimation\n```
+```matlab
+cd code/estimation\ntranslog_markup_estimation
+```
 **Outputs:**
 - `results/elasticities_by_sector.csv`
 - Elasticidades estimadas
@@ -86,7 +89,9 @@ cd code/analysis\nanalyze_markup_results
 - 6 figuras em `results/figures/`
 - Tabelas LaTeX em `results/tables/`
 ### Testes
-```matlab\ncd code/tests\nexemplo_uso_rapido           % Teste com dados sintéticos\ndemo_2sls_vs_fminsearch      % Comparação metodológica\n```
+```matlab
+cd code/tests\nexemplo_uso_rapido           % Teste com dados sintéticos\ndemo_2sls_vs_fminsearch      % Comparação metodológica
+```
 ## 📖 Documentação
 Ver pasta `docs/` para documentação completa:
 - **Manual Completo:** `docs/README_MATLAB.md`
@@ -95,7 +100,9 @@ Ver pasta `docs/` para documentação completa:
 ## 🔬 Metodologia
 ### Função de Produção Translog\n\n
 A receita da firma segue uma função de produção flexível:
-```\nlog(Q_it) = β₀ + β_v·log(V_it) + β_k·log(K_it) + \n            ½·β_vv·[log(V_it)]² + ½·β_kk·[log(K_it)]² + \n            β_vk·log(V_it)·log(K_it) + ω_it + ε_it\n```
+```
+log(Q_it) = β₀ + β_v·log(V_it) + β_k·log(K_it) + \n            ½·β_vv·[log(V_it)]² + ½·β_kk·[log(K_it)]² + \n            β_vk·log(V_it)·log(K_it) + ω_it + ε_it
+```
 Onde:
 - Q_it = Receita da firma i no período t
 - V_it = Insumo variável (COGS + despesas administrativas)
@@ -103,13 +110,15 @@ Onde:
 - ω_it = Produtividade não-observada
 ### Markup
 O markup é calculado como:
-```\nμ_it = θ_V,it / α_V,it\n```
+```
+μ_it = θ_V,it / α_V,it
+```
 Onde:
 - θ_V,it = Elasticidade do insumo variável
 - α_V,it = Share do insumo na receita
 ## 👥 Autores
-**Fabio Souza** - Mestrando em Economia, UnB
 **Prof. Vitor Gomes** - Orientador, Departamento de Economia, UnB
+**Fabio Souza** - Mestrando em Economia, UnB
 ## 📚 Referências
 - De Loecker, J., & Warzynski, F. (2012). Markups and firm-level export status. *American Economic Review*, 102(6), 2437-2471.
 - Ackerberg, D. A., Caves, K., & Frazer, G. (2015). Identification properties of recent production function estimators. *Econometrica*, 83(6), 2411-2451.
