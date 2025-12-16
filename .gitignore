@@ -1,0 +1,253 @@
+# ==============================================================================
+# .gitignore para Projeto - Estimação de Markups
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# MATLAB - Arquivos Temporários e Cache
+# ------------------------------------------------------------------------------
+
+# Arquivos de autosave
+*.asv
+
+# Arquivos MEX compilados (específicos de sistema operacional)
+*.mex
+*.mexw32
+*.mexw64
+*.mexa64
+*.mexmaci64
+*.mexmaca64
+
+# Arquivos P-code (código ofuscado)
+*.p
+
+# Arquivos de simulink
+*.slx.autosave
+*.slxc
+slprj/
+
+# Cache de arquivos
+*.autosave
+
+# Diretórios de build
+codegen/
+bin/
+build/
+
+# MATLAB App Designer
+*.mlapp.bak
+
+# ------------------------------------------------------------------------------
+# DADOS - NÃO COMMITAR DADOS SENSÍVEIS!
+# ------------------------------------------------------------------------------
+
+# Dados brutos (da Economática/B3)
+data/raw/*
+data/raw/**/*
+
+# Dados processados
+data/processed/*
+data/processed/**/*
+
+# Exceções: manter READMEs explicativos
+!data/raw/README.md
+!data/processed/README.md
+!data/README_DATA.md
+
+# Arquivos de exemplo (pequenos, para testes)
+!data/processed/sample_data.csv
+
+# ------------------------------------------------------------------------------
+# RESULTADOS - Regeneráveis a partir do código
+# ------------------------------------------------------------------------------
+
+# Tabelas de resultados
+results/**/*.csv
+results/**/*.xlsx
+results/**/*.txt
+
+# Figuras
+results/**/*.png
+results/**/*.jpg
+results/**/*.jpeg
+results/**/*.pdf
+results/**/*.eps
+results/**/*.fig
+
+# Workspaces salvos
+results/**/*.mat
+
+# Logs de estimação
+results/**/*.log
+
+# Exceções: manter estrutura de pastas
+!results/.gitkeep
+!results/README.md
+
+# ------------------------------------------------------------------------------
+# OUTPUTS TEMPORÁRIOS
+# ------------------------------------------------------------------------------
+
+temp/
+tmp/
+scratch/
+cache/
+*.tmp
+
+# ------------------------------------------------------------------------------
+# DOCUMENTOS - Rascunhos e versões intermediárias
+# ------------------------------------------------------------------------------
+
+# LaTeX temporários
+paper/**/*.aux
+paper/**/*.bbl
+paper/**/*.blg
+paper/**/*.log
+paper/**/*.out
+paper/**/*.synctex.gz
+paper/**/*.fdb_latexmk
+paper/**/*.fls
+paper/**/*.toc
+paper/**/*.lof
+paper/**/*.lot
+
+# Word temporários
+paper/**/*.docx~
+paper/**/~$*.docx
+paper/**/~$*.doc
+
+# Backups
+*.bak
+*~
+*.backup
+
+# ------------------------------------------------------------------------------
+# SISTEMA OPERACIONAL
+# ------------------------------------------------------------------------------
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+*~
+
+# ------------------------------------------------------------------------------
+# IDEs e EDITORES
+# ------------------------------------------------------------------------------
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ / PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# MATLAB Editor
+*.m~
+
+# ------------------------------------------------------------------------------
+# CONTROLE DE VERSÃO
+# ------------------------------------------------------------------------------
+
+# Git
+.git/
+*.orig
+
+# ------------------------------------------------------------------------------
+# CREDENCIAIS E CONFIGURAÇÕES LOCAIS
+# ------------------------------------------------------------------------------
+
+# Configurações locais (cada usuário pode ter diferentes)
+config/local_config.m
+credentials.m
+*.env
+
+# Chaves de API (NUNCA commitar!)
+*api_key*
+*apikey*
+*secret*
+*token*
+*.pem
+*.key
+
+# ------------------------------------------------------------------------------
+# ARQUIVOS GRANDES
+# ------------------------------------------------------------------------------
+
+# Datasets grandes (> 100MB)
+*.mat
+data/**/*.mat
+
+# Exceção: arquivos .mat pequenos de exemplo
+!data/sample/*.mat
+
+# ------------------------------------------------------------------------------
+# JUPYTER NOTEBOOKS (se usar MATLAB Live Scripts exportados)
+# ------------------------------------------------------------------------------
+
+.ipynb_checkpoints/
+*.ipynb
+
+# ------------------------------------------------------------------------------
+# PYTHON (se houver integração Python-MATLAB)
+# ------------------------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+.venv
+
+# ------------------------------------------------------------------------------
+# R (se houver comparações com R)
+# ------------------------------------------------------------------------------
+
+.Rhistory
+.RData
+.Rproj.user
+
+# ------------------------------------------------------------------------------
+# ESPECÍFICO DO PROJETO
+# ------------------------------------------------------------------------------
+
+# Dados confidenciais da Economática
+data/economática/*
+
+# Arquivos de validação temporários
+validation/temp_*
+
+# Outputs de testes
+tests/outputs/*
+
+# Simulações intermediárias
+simulations/temp/*
+
+# ==============================================================================
+# FIM DO .gitignore
+# ==============================================================================
