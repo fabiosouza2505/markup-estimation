@@ -1,17 +1,4 @@
-%% TRANSLOG MARKUP ESTIMATION - VERSÃO FMINSEARCH (NLS)
-% Estimação via Mínimos Quadrados Não-Lineares usando fminsearch
-% 
-% Esta versão utiliza otimização direta dos parâmetros da função translog
-% ao invés da abordagem 2SLS em dois estágios.
-%
-% Autores: Vitor Gomes, Fabio Souza, M Lima
-% Data: Março 2025
-%
-% METODOLOGIA:
-%   1. Especificar função de produção translog
-%   2. Minimizar soma de quadrados dos resíduos via fminsearch
-%   3. Calcular markups usando parâmetros estimados
-%   4. Bootstrap para erros-padrão
+
 
 %% ========================================================================
 % CONFIGURAÇÕES INICIAIS
@@ -31,7 +18,7 @@ config.optim_display = 'iter';       % 'off', 'final', 'iter'
 config.max_iter = 5000;              % Máximo de iterações para fminsearch
 
 % Caminhos
-paths.input_data = 'data/processed/panel_data.csv';
+paths.input_data = 'data/raw/dados_brutos.xlsx';
 paths.output_dir = 'results/';
 paths.figures_dir = 'figures/';
 
