@@ -39,7 +39,7 @@ function safe_push(mensagem)
     
     % 3. Pull novamente (por segurança)
     fprintf('\n3. Verificando novamente...\n');
-    [status, output] = system('git pull origin main');
+    [~, output] = system('git pull origin main');
     
     if contains(output, 'Already up to date')
         fprintf('   ✓ Tudo sincronizado\n');
