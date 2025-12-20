@@ -1,0 +1,134 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{amsmath,bm}
+\usepackage{amssymb}
+\usepackage[brazil]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{longtable}
+\usepackage[margin=1in]{geometry}
+\usepackage{makecell}            % Para permitir quebras de linha no cabeçalho
+\usepackage{booktabs}
+\begin{document}
+
+\title{Estagnação dos Markups e a Performance Financeira das Empresas Brasileiras}
+\author{V Gomes, M Lima, F Souza \\
+UnB}
+\date{\today}
+
+\maketitle
+
+\section{Introdução}
+
+Neste artigo são apresentadas estimativas do markup utilizando dados financeiros para as empresas brasileiras. A principal contribuição do artigo é estabelecer fatos estilizados sobre o markup das empresas abertas.
+
+
+
+Mensuração do markup
+
+Discussões da literatura
+
+\section{Markups: Fatos Estilizados}
+
+Fatos estilizados do markup como em DEU.
+
+\section{Relação do Markup com Variáveis Financerias}
+
+\section{Conclusão}
+
+Os markups das empresas abertas são estagnados. 
+
+\appendix
+\section*{Anexo}
+\section{Estimativa da Função Geradora de Vendas}
+
+Suponha a seguinte função de produção:
+%
+\begin{equation}\label{eq:ProdFun}
+Q_{jt} = Q^*_{jt} \exp(\varepsilon_{jt})
+\end{equation}
+%
+$$
+Q^*_{jt} = F(K_{jt}, L_{jt}, M_{jt}) \exp (\omega_{jt})
+$$
+%
+em que $Q_{jt}$ é a produção da firma $j$ no período $t$, utilizando capital $K$, trabalho $L$ e
+materiais $M$. $\omega_{jt}$ é a produtividade Hicks-neutra que a firma observa nos insumos
+variáveis em $t$, mas que permanece não observada pelo econometrista. Como em OP, $\omega_{jt}$ é
+governada por um processo de Markov de primeira ordem com a seguinte lei de movimento:
+%
+\begin{equation}\label{eq:omegaLoM}
+\omega_{jt} = \mathrm{E}( \omega_{jt} \mid \omega_{jt-1} ) + \xi_{jt} = g(\omega_{jt-1}) + \xi_{jt}
+\end{equation}
+%
+em que $g(\omega_{jt-1})$ é a produtividade esperada e $\xi_{jt}$ é a inovação de produtividade,
+isto é,
+%
+\begin{equation}
+\xi_{jt} = \omega_{jt} - g(\omega_{jt-1}).
+\end{equation}
+%
+O termo estocástico $\varepsilon_{jt}$ em \eqref{eq:ProdFun} captura a diferença entre o produto
+efetivo da firma $Q_{jt}$ e o produto $Q_{jt}^*$, que é o produto planejado da firma quando escolhe
+os insumos. Nesse caso, $\varepsilon_{jt}$ não é correlacionado com o tempo ou com os insumos
+produtivos. As firmas e os econometristas não observam $\varepsilon_{jt}$, e o produto planejado
+$Q^*_{jt}$ permanece não observado pelo economista.
+
+
+DLW estimam os parâmetros da função de produção utilizando a implementação do procedimento OP/LP conforme proposto por ACF. DJ argumentam que, como o produto efetivo observado é $Q_{jt} =
+Q^*_{jt} \exp(\varepsilon_{jt})$, estimar  $\varepsilon_{jt}$ é equivalente a estimar o produto planejado $Q^*_{jt}$.
+
+O procedimento OP/LP começa com uma função $\omega_{jt} = h(z_{jt})$ que expressa a produtividade Hicks-neutra por meio de um vetor de variáveis observáveis $z_{jt}$. OP
+usa a demanda por investimento para inverter $\omega_{jt}$ enquanto LP utiliza a demanda por materiais. DLW seguem LP e usam materiais: $\omega_{jt} = h(m_{jt},
+k_{jt}, l_{jt})$, em que letras minúsculas denotam logaritmos naturais.
+
+Substituindo a função $\omega_{jt} = h(z_{jt})$ na equação \eqref{eq:ProdFun} e tomando logaritmos, obtemos o primeiro passo do estimador ACF de OP/LP:
+%
+\begin{equation}\label{eq:1step}
+q_{jt} = \ln F(K_{jt}, L_{jt}, M_{jt} ) + h(z_{jt}) + \varepsilon_{jt} = \phi(z_{jt}) + \varepsilon_{jt}
+\end{equation}
+%
+em que $\phi(z_{jt})$ é uma função não paramétrica de $z_{jt}$ que deve ser estimada. Supondo que $\varepsilon_{jt}$ seja
+não correlacionado com $z_{jt}$, a regressão da equação \eqref{eq:1step} fornece estimativas para $\phi(\cdot)$ e $\varepsilon_{jt}$. DJ ressaltam
+que o termo $\varepsilon_{jt}$ separa o produto efetivo do produto planejado $(q^*_{jt} = \phi(z_{jt}) ).$
+
+No segundo passo de ACF, a equação \eqref{eq:omegaLoM} e $\widehat{\phi}(\cdot)$ são insumos para a seguinte regressão GMM não linear:
+%
+\begin{equation}\label{eq:2step}
+q_{jt} = \ln F(K_{jt}, L_{jt}, M_{jt} ) + g \left ( \widehat{\phi}( z_{jt-1} ) - \ln F(K_{jt-1}, L_{jt-1}, M_{jt-1}) \right ) + \xi_{jt} + \varepsilon_{jt}
+\end{equation}
+%
+em que a função de esperança condicional $g(\cdot)$ é estimada de forma não paramétrica. Nos argumentos $z_{jt}$ da função $\omega_{jt} = h(z_{jt})$,
+DLW incluem quaisquer variáveis potenciais que possam afetar a escolha ótima de demanda por insumos. Um exemplo são os preços dos insumos.
+
+% comentários
+
+Leontief Como discutido no texto principal, sob a tecnologia de Leontief a presença de concorrência imperfeita não afeta o controle. A razão é
+simples: independentemente de diferenças nos preços dos insumos ou de concorrência imperfeita no mercado do produto, desde que as firmas minimizem
+custos e produzam no ponto ótimo em que F(L, K)O = ßmM, o controle é válido.
+
+\subsection{Identificação}
+
+Controle por investimento
+
+De Loecker (2011, p. 1428)
+
+1ª etapa: $\beta_l l_{it} + \beta_m m_{it} + \beta_s q_{st} + \phi_t( i_{it}, k_{it}, D ) + \varepsilon_{it}$
+
+Na verdade, 3ª etapa:
+\begin{equation}
+\mathrm{E} \left [  \xi_{it} ( \beta_k, \beta_{l} )  \left(
+                                                  \begin{array}{c}
+                                                    k_{it} \\
+                                                    l_{it-1} \\
+                                                  \end{array}
+                                                \right)   \right ] = 0.
+\end{equation}
+%
+Na verdade, $D$ entra na regressão não paramétrica de $\omega$.
+
+
+\end{document}
