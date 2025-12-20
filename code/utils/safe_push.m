@@ -4,10 +4,6 @@ function safe_push(mensagem)
     % Uso:
     %   safe_push('feat: nova funcionalidade')
     
-    fprintf('========================================\n');
-    fprintf('SAFE PUSH\n');
-    fprintf('========================================\n\n');
-    
     % 1. Pull primeiro
     fprintf('1. Sincronizando com GitHub...\n');
     [status, output] = system('git pull origin main');
