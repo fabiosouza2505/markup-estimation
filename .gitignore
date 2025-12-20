@@ -48,10 +48,12 @@ data/raw/**/*
 data/processed/*
 data/processed/**/*
 
-# Exceções: manter READMEs explicativos
+# Exceções:
 !data/raw/README.md
 !data/processed/README.md
 !data/README_DATA.md
+!data/processed/*.csv
+!data/processed/**/*.csv
 
 # Arquivos de exemplo (pequenos, para testes)
 !data/processed/sample_data.csv
