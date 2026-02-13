@@ -1,0 +1,27 @@
+═══════════════════════════════════════
+RELATÓRIO DE ESTIMAÇÃO DE MARKUPS
+═══════════════════════════════════════
+
+MÉTODO: 2SLS
+
+PARÂMETROS (Exógenas):
+  β₀  =   0.0293  (Constante)
+  β_k =  -0.2316  (Capital)
+  β_kk =   0.0113  (Capital²)
+  β_ω  =   1.0067  (Produtividade)
+
+PARÂMETROS (Endógenas — instrumentalizadas):
+  β_v =   1.2087  (Insumo variável)
+  β_vv =  -0.0025  (Insumo variável²)
+  β_vk =  -0.0068  (Interação V×K)
+
+QUALIDADE DO AJUSTE:
+  R² (forma reduzida) = 0.9906
+  R² (2SLS) = 0.9976
+  RMSE = 0.1663
+
+MARKUPS:
+  Média = 1.168
+  Mediana = 1.145
+  Desvio = 0.398
+  Min-Max = [0.536 - 5.670]
