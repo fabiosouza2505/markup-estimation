@@ -4,11 +4,7 @@ function [params, diagnostics] = estimate_translog_nls(data, config)
     % Função de produção Translog (parametrização consistente com 2SLS):
     %   log(Q) = b0 + bv*log(V) + bk*log(K) +
     %            bvv*log(V)^2 + bkk*log(K)^2 + bvk*log(V)*log(K) + e
-    %
-    % NOTA: Os coeficientes bvv e bkk NAO incluem o fator 1/2.
-    %       Isso garante compatibilidade direta com o 2SLS e com
-    %       calculate_markups_from_params_weighted, que calcula a
-    %       elasticidade como: theta_v = bv + 2*bvv*log(V) + bvk*log(K)
+
     %
     % INPUTS:
     %   data   - Tabela com: log_receita, log_variable_input, log_capital
@@ -69,7 +65,6 @@ function [params, diagnostics] = estimate_translog_nls(data, config)
     beta_init_cd = X_cd \ y;
     
     % Vetor de parametros: [b0, bv, bk, bvv, bkk, bvk]
-    % SEM fator 1/2 - parametrizacao direta, igual ao 2SLS
     theta0 = [
         beta_init_cd(1);    % beta0
         beta_init_cd(2);    % beta_v
@@ -200,14 +195,13 @@ end
 
 
 % =========================================================================
-% FUNCAO AUXILIAR: Predicao Translog (SEM fator 1/2)
+% FUNCAO AUXILIAR: Predicao Translog
 % =========================================================================
 function y_pred = predict_translog(theta, log_v, log_k)
     % Parametrizacao direta (consistente com 2SLS):
     %   log(Q) = b0 + bv*V + bk*K + bvv*V^2 + bkk*K^2 + bvk*V*K
     %
     % A elasticidade dlog(Q)/dlog(V) = bv + 2*bvv*V + bvk*K
-    % O fator 2x surge naturalmente da derivada de bvv*V^2
     
     y_pred = theta(1) + ...               % b0
              theta(2) .* log_v + ...       % bv*V
