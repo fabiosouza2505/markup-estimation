@@ -45,8 +45,8 @@ data/raw/*
 data/raw/**/*
 
 # Dados processados
-data/processed/*
-data/processed/**/*
+# data/processed/*
+# data/processed/**/*
 
 # Exceções:
 !data/raw/README.md
@@ -63,17 +63,17 @@ data/processed/**/*
 # ------------------------------------------------------------------------------
 
 # Tabelas de resultados
-results/**/*.csv
-results/**/*.xlsx
-results/**/*.txt
+# results/**/*.csv
+# results/**/*.xlsx
+# results/**/*.txt
 
 # Figuras
-results/**/*.png
-results/**/*.jpg
-results/**/*.jpeg
-results/**/*.pdf
-results/**/*.eps
-results/**/*.fig
+# results/**/*.png
+# results/**/*.jpg
+# results/**/*.jpeg
+# results/**/*.pdf
+# results/**/*.eps
+# results/**/*.fig
 
 # Workspaces salvos
 results/**/*.mat
