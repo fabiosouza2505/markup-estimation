@@ -1,0 +1,9 @@
+setor,method,reduced_form_r2,rsquared_2sls,rmse,f_stat_mean,weak_instruments,n_obs,n_instruments,omega_mean,omega_std
+"Indústria extrativa e agropecuária",2SLS,NaN,0.79993002003796,0.229553257740598,NaN,0,568,6,-0.0481418801547561,0.51368811789015
+"Alimentos e bebidas",2SLS,NaN,0.809380507731274,0.0485136967845728,NaN,0,904,6,0.448677812870224,0.111181042240399
+"Têxteis, vestuário, couro e calçados",2SLS,NaN,0.900552045064613,0.122631379764409,NaN,0,1659,6,0.0492254882230878,0.388988154530985
+"Madeira, celulose, papel, artigos de borracha e material plástico",2SLS,NaN,0.334706915509969,1.04762935944975,NaN,0,628,6,-2.39926408559976,1.28545662684793
+"Indústria química e petroquímica",2SLS,NaN,0.897003953510178,0.171419887444827,NaN,0,793,6,-1.79451726629648,0.534483860427876
+"Metalurgia, siderurgia e produtos de minerais não-metálicos",2SLS,NaN,0.954309975252741,0.331828784236522,NaN,0,1610,6,6.84210176836353,1.55289207745659
+"Máquinas, equipamentos e aparelhos diversos",2SLS,NaN,0.584990919174588,0.420789649254247,NaN,0,1185,6,-0.25565513917448,0.653468261856065
+"Veículos automotores e e outros equipamentos de transporte",2SLS,NaN,0.829297626737694,0.196015592317467,NaN,0,978,6,1.11229818189653,0.474675867348912
