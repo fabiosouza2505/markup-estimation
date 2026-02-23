@@ -1,9 +1,0 @@
-setor,method,reduced_form_r2,rsquared_2sls,rmse,f_stat_mean,weak_instruments,n_obs,n_instruments,omega_mean,omega_std
-"Indústria extrativa e agropecuária",2SLS,NaN,0.953928434402035,0.633375759416401,NaN,0,568,0,5.24592419895012e-09,0.633934045782542
-"Alimentos e bebidas",2SLS,NaN,0.998360251403059,0.10250884529939,NaN,0,904,0,-1.30381961618534e-09,0.102565589751729
-"Têxteis, vestuário, couro e calçados",2SLS,NaN,0.988406614009765,0.330369540342477,NaN,0,1659,0,-1.84104793375423e-09,0.330469154257101
-"Madeira, celulose, papel, artigos de borracha e material plástico",2SLS,NaN,0.97399772057303,0.618265861230651,NaN,0,628,0,1.78757343835209e-09,0.6187586997794
-"Indústria química e petroquímica",2SLS,NaN,0.968581874507997,0.561095034790681,NaN,0,793,0,-4.7529555698234e-09,0.561449149710621
-"Metalurgia, siderurgia e produtos de minerais não-metálicos",2SLS,NaN,0.990112723628949,0.361812034425933,NaN,0,1610,0,4.63277359276914e-09,0.361924450782359
-"Máquinas, equipamentos e aparelhos diversos",2SLS,NaN,0.986134397430162,0.384488452350986,NaN,0,1185,0,-8.93825641724404e-10,0.38465078651585
-"Veículos automotores e e outros equipamentos de transporte",2SLS,NaN,0.988731860064741,0.428156896818952,NaN,0,978,0,-4.84404541018934e-11,0.428375958944729
