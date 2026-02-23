@@ -48,7 +48,7 @@ function main()
     
     % Caminhos
     input_path = 'C:/Users/fabio/OneDrive/Documents/MATLAB/markup-estimation/data/processed/estimation-8sect/final_data.csv';
-    output_dir = 'C:/Users/fabio/OneDrive/Documents/MATLAB/markup-estimation/results/estimation-GMM nonlinear/';
+    output_dir = 'C:/Users/fabio/OneDrive/Documents/MATLAB/markup-estimation/results/estimation-8sect/';
     
     % ── Métodos de estimação ──
     % Opções: '2sls', 'nls', 'gmm_acf', ou qualquer combinação.
